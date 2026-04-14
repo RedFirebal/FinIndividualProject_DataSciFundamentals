@@ -112,6 +112,18 @@ After plotting this data it looked like this.
 
 <img width="1990" height="1189" alt="image" src="https://github.com/user-attachments/assets/39668749-cc5a-46c9-a5c4-e81727b81530" />
 
+This chart shows thhe year sales relationships more clearly, allowing for a bit more information to be taken from this question. While all the years for top global sales are present, no two regions contain the same order. A few intresting things to note:
+
+* Top EU sales include 2011 as a top selling year despite it not appearing in either the top global sales or the top sales for any other region
+* Top NA sales remain consistant with the top global sales, showing further how impactful of a region it is
+* Top Other sales are almost the same as NA, with the exception of the 2nd and 3rd highest selling years being swapped
+* The top year for JP matches with the top year for the best selling game (which was an original prediction from my group project for global sales)
+
+
+It is extremely interesting to see that there is such a great deal of variance between top years per region as I had assumed that most of the years, at the very least the top one, would be consistant across all regions.
+
+### Question 3: Can LSTM be used to predict NA Sales (either per game or annual total)?
+
 
 
 
