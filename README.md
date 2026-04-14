@@ -80,7 +80,7 @@ I decided the best way to view the this question was to split it into two: What 
 
 <img width="506" height="72" alt="image" src="https://github.com/user-attachments/assets/c984a48d-1b5f-44a0-a458-de7d3229fca4" />
 
-Using these charts, I plotted out both the chart of sales over the years and the top 5 sales years.
+Using these franes, I plotted out both the chart of sales over the years and the top 5 sales years.
 
 <img width="1005" height="569" alt="image" src="https://github.com/user-attachments/assets/20064ca5-51bb-4680-9f20-b3fafabb14c4" />
 
