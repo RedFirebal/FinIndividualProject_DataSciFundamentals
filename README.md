@@ -134,4 +134,12 @@ Using this model produced the most accurate level of predictions out of all my m
 
 To my understanding, the reason why these models have not been working is due to the small sample size. Since we are only working in a period of 36 years, there are far too few datapoints to formulate connections. The result comes back with constant overfitting as it can not see enough data to get within a close enough range due to lack of how the numbers are changing. I believe the best way to make this work would be to split the dataset's dating down even further to a month/year basis. We would then have signifigantly more datapoints to work with and have far more relationships to observe such as the rise of sales for holiday season releases.
 
+## Conclusion
 
+After working with this dataset to answer these questions I came to 3 overall conclusions:
+
+* Global sale success does not necessarily stem from the sales of outliers/top selling games. Instead they depend more on consistantly solid sales throughout the year.
+* Similarly, success per year for each region is independant from the global sales. No two regions share the exact same top years in the same order and therefore react differently to individual releases. The only region that directly follows the global sales preformance is NA due to its massive contribution to overall sales
+* Due to lack of timepoints to analyze, LSTM models can not make accurate predictions for specific regions. Other machine learning tools may be able to but this one needs more information.
+
+If given the oppertunity to work with this dataset more, I'd love to reformat the dates in my dataset to a month/year release format and try to get the LSTM model to work. Id also love to check the sales data per season in the top years as I'd be interested to see if any seasons beat out winter in terms of sales.
