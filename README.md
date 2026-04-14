@@ -124,6 +124,14 @@ It is extremely interesting to see that there is such a great deal of variance b
 
 ### Question 3: Can LSTM be used to predict NA Sales (either per game or annual total)?
 
+As most of the data for this project worked with year sall data, I wanted to see if it was possible for a LSTM model to predict sale for NA as it is the highest grossing region overall. I started working with every data point, sorted by year. This version, whihe it could make some level of prediction, was not formatted correctly. Because each point is a game released at some point during a set year, the model was not being given properly timed data and was not able to make any meaningful connections. I then transitioned to several attempts to make a model that can predict annual total sales. This went through several itterations, none of which provided any level of accuracy and was either dramatically overfitting or not properly alligning with the data. In a final effort to see if any sort of connections could be made, I asked Gemini to help scale the data and map whether or not that could help with improving the connections.
 
+<img width="329" height="68" alt="image" src="https://github.com/user-attachments/assets/5ef13529-1fe5-449a-987a-e0dafc5d02ea" />
+
+Using this model produced the most accurate level of predictions out of all my models, but did not produce any overall accuracy. 
+
+<img width="1238" height="855" alt="image" src="https://github.com/user-attachments/assets/1cd682b9-3dce-4fe3-bbb5-2978e51c6f4a" />
+
+To my understanding, the reason why these models have not been working is due to the small sample size. Since we are only working in a period of 36 years, there are far too few datapoints to formulate connections. The result comes back with constant overfitting as it can not see enough data to get within a close enough range due to lack of how the numbers are changing. I believe the best way to make this work would be to split the dataset's dating down even further to a month/year basis. We would then have signifigantly more datapoints to work with and have far more relationships to observe such as the rise of sales for holiday season releases.
 
 
