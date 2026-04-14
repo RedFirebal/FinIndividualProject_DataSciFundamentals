@@ -78,17 +78,17 @@ The following is what I found while working on my questions
 
 I decided the best way to view the this question was to split it into two: What were the top 5 years in terms of sales and where they fit into the data overall. To do this I set up two very simple frames branching off of the year_sales frame shown in the features section.
 
-<img width="506" height="72" alt="image" src="https://github.com/user-attachments/assets/c984a48d-1b5f-44a0-a458-de7d3229fca4" />
+<img width="506" height="72" alt="image" src="q1-frames.png" />
 
 Using these franes, I plotted out both the chart of sales over the years and the top 5 sales years.
 
-<img width="1005" height="569" alt="image" src="https://github.com/user-attachments/assets/20064ca5-51bb-4680-9f20-b3fafabb14c4" />
+<img width="1005" height="569" alt="image" src="q1_global_sales_chart.png" />
 
-<img width="1005" height="547" alt="image" src="https://github.com/user-attachments/assets/a9d893f1-6d1b-438f-97c2-d3860903d134" />
+<img width="1005" height="547" alt="image" src="q1_top_5_years_chart.png" />
 
 Looking into this data, it is fairly understandable why the charts look the way they do. The top years all coencided with at least 1 major release in the top 20 overall, such as 2006 hosting Wii Sports. 
 
-<img width="876" height="508" alt="image" src="https://github.com/user-attachments/assets/29b6acba-8538-4444-9fb2-ac348f875ff1" />
+<img width="876" height="508" alt="image" src="q1_top_game_sales_display.png" />
 
 Whats intersesting is that the top 3 best selling games for these years contain at least on Nintendo game. Even more intersting is that the years made up of entirely top selling Nintendo games, containing the most number of top 20 best selling games overall, do not place the highest. 2006 containes the top selling game overall, Wii sports with 82.72 million in sales, yet solidly places in the 5th slot for overall yearly sales. I believe this best shows that because of the massive number of games releasing during these years, outliers do not determine a year's individual success. Consistant sales across the year likely have far more impact than a few massive ones. 
 
@@ -96,21 +96,21 @@ Whats intersesting is that the top 3 best selling games for these years contain 
 
 To start, I once again decided to split this question into two: see how things look overall then how they breakdown by region. First I set up the neccessary frames by finding the yearly sum for each reigon.
 
-<img width="538" height="114" alt="image" src="https://github.com/user-attachments/assets/48403b97-80ca-4ca0-8685-7975947f99c3" />
+<img width="538" height="114" alt="image" src="q2_frames.png" />
 
 After plotting them on a single chart, they look something like this.
 
-<img width="1005" height="569" alt="image" src="https://github.com/user-attachments/assets/5233f14e-3867-4a34-ae9a-39e0d0cdcd27" />
+<img width="1005" height="569" alt="image" src="q2_region_sales_chart.png" />
 
 Already we see a few things. Compared to my group project's findings, we can see that even though NA tends to sell the most on average, in the earlier years they traded the top place with JP several times. After 1995 however, NA remains consistantly on top, only dipping as the data becomes less consistant. EU shoots up similarly around this time, leaving JP and other countries grappling back and forth. While this may seem like video game sales in Japan lessen over time, it is important to not that the other 3 regions make up signifigantly more than Japan. NA accounts for all of North America, EU accounts for all of Europe and Other accounts for the rest of the world. Understanding that, Japan's sale numbers are facinating as they show how a single country is able to sell similarly to full regions.
 
 After plotting the chart above I decided to see how the years broke down per sale region. To do this I first sorted each frame made above by their respective sales rather than year and pulled the top 5 datapoints from each. 
 
-<img width="573" height="89" alt="image" src="https://github.com/user-attachments/assets/207ecbd4-d312-4800-b792-fcfc78308851" />
+<img width="573" height="89" alt="image" src="q2_frame_sort.png" />
 
 After plotting this data it looked like this.
 
-<img width="1990" height="1189" alt="image" src="https://github.com/user-attachments/assets/39668749-cc5a-46c9-a5c4-e81727b81530" />
+<img width="1990" height="1189" alt="image" src="q2_region_top_years_chart.png" />
 
 This chart shows thhe year sales relationships more clearly, allowing for a bit more information to be taken from this question. While all the years for top global sales are present, no two regions contain the same order. A few intresting things to note:
 
@@ -126,11 +126,11 @@ It is extremely interesting to see that there is such a great deal of variance b
 
 As most of the data for this project worked with year sall data, I wanted to see if it was possible for a LSTM model to predict sale for NA as it is the highest grossing region overall. I started working with every data point, sorted by year. This version, whihe it could make some level of prediction, was not formatted correctly. Because each point is a game released at some point during a set year, the model was not being given properly timed data and was not able to make any meaningful connections. I then transitioned to several attempts to make a model that can predict annual total sales. This went through several itterations, none of which provided any level of accuracy and was either dramatically overfitting or not properly alligning with the data. In a final effort to see if any sort of connections could be made, I asked Gemini to help scale the data and map whether or not that could help with improving the connections.
 
-<img width="329" height="68" alt="image" src="https://github.com/user-attachments/assets/5ef13529-1fe5-449a-987a-e0dafc5d02ea" />
+<img width="329" height="68" alt="image" src="q3_AI_scaling.png" />
 
 Using this model produced the most accurate level of predictions out of all my models, but did not produce any overall accuracy. 
 
-<img width="1238" height="855" alt="image" src="https://github.com/user-attachments/assets/1cd682b9-3dce-4fe3-bbb5-2978e51c6f4a" />
+<img width="1238" height="855" alt="image" src="q3_predictions.png" />
 
 To my understanding, the reason why these models have not been working is due to the small sample size. Since we are only working in a period of 36 years, there are far too few datapoints to formulate connections. The result comes back with constant overfitting as it can not see enough data to get within a close enough range due to lack of how the numbers are changing. I believe the best way to make this work would be to split the dataset's dating down even further to a month/year basis. We would then have signifigantly more datapoints to work with and have far more relationships to observe such as the rise of sales for holiday season releases.
 
